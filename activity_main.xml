@@ -6,41 +6,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:padding="16dp"
-    android:background="#ECEFF1"
+    android:background="#000000"
+    android:padding="20dp"
     >
 
-    <!--  result edit text box    -->
-
     <TextView
-        android:id="@+id/editTextResult"
+        android:id="@+id/result"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:gravity="end|bottom"
-        android:elevation="10dp"
-        android:background="#FFFFFF"
-        android:layout_alignParentTop="true"
-        android:layout_margin="10dp"
+        android:layout_height="320dp"
         android:text="0"
-        android:padding="10dp"
-        android:textColor="#000000"
-        android:textSize="50sp"
+        android:gravity="end|bottom"
+        android:textSize="45sp"
         android:textStyle="bold"
+        android:textColor="#FFF"
+        android:elevation="5dp"
+        android:layout_marginBottom="10dp"
         />
-    <!--  result edit text box    -->
-    
-    <!--  Buttom Layout  -->
+
     <LinearLayout
-        android:id="@+id/buttomLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/editTextResult"
-        android:orientation="vertical"
-        android:layout_margin="10dp"
+        android:layout_below="@id/result"
         android:weightSum="5"
+        android:orientation="vertical"
         >
-        
-        <!--        1st row          -->
+
+        <!-- 1st row       -->
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -50,57 +41,60 @@
             android:weightSum="4"
             >
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btnClear"
+                android:id="@+id/btnDelete"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="C"
-                android:background="#ED4B1C"
+                android:layout_gravity="center"
+                android:text="⌫"
+                android:textColor="#ffffff"
+                android:background="@drawable/btn_ios"
                 android:textStyle="bold"
                 android:textSize="24sp"
-                android:textColor="#FFF"
-                android:layout_margin="4dp"
+
+                />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnPlus_Minus"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:text="+/-"
+                android:textColor="#ffffff"
+                android:background="@drawable/btn_ios"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnPercentage"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:text="%"
+                android:textColor="#ffffff"
+                android:background="@drawable/btn_ios"
+                android:textStyle="bold"
+                android:textSize="24sp"
                 />
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnDivide"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="⌫"
-                android:background="#ED4B1C"
-                android:textStyle="bold"
-                android:textSize="24sp"
-                android:textColor="#FFF"
-                android:layout_margin="4dp"
-                />
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btnMultiply"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="×"
-                android:background="#EB9516"
-                android:textStyle="bold"
-                android:textSize="24sp"
-                android:textColor="#FFF"
-                android:layout_margin="4dp"
-                />
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btnDelete"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_gravity="center"
                 android:text="÷"
-                android:background="#EB9516"
+                android:textColor="#ffffff"
+                android:background="@drawable/btnios_y"
                 android:textStyle="bold"
                 android:textSize="24sp"
-                android:textColor="#FFF"
-                android:layout_margin="4dp"
                 />
+
+
 
         </LinearLayout>
 
-        <!--   2nd Row       -->
+        <!--     2nd row   -->
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -114,54 +108,54 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:layout_gravity="center"
                 android:text="7"
-                android:background="#FFFFFF"
+                android:textColor="#ffffff"
+                android:background="@drawable/btn_ios"
                 android:textStyle="bold"
                 android:textSize="24sp"
-                android:textColor="#000"
-                android:layout_margin="4dp"
+
                 />
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn8"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:layout_gravity="center"
                 android:text="8"
-                android:background="#FFFFFF"
+                android:textColor="#ffffff"
+                android:background="@drawable/btn_ios"
                 android:textStyle="bold"
                 android:textSize="24sp"
-                android:textColor="#000"
-                android:layout_margin="4dp"
                 />
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn9"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:layout_gravity="center"
                 android:text="9"
-                android:background="#FFFFFF"
+                android:textColor="#ffffff"
+                android:background="@drawable/btn_ios"
                 android:textStyle="bold"
                 android:textSize="24sp"
-                android:textColor="#000"
-                android:layout_margin="4dp"
                 />
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btnSubtract"
+                android:id="@+id/btnMultiply"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="-"
-                android:background="#EB9516"
-                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:text="X"
+                android:textColor="#ffffff"
+                android:background="@drawable/btnios_y"
+
                 android:textSize="24sp"
-                android:textColor="#FFF"
-                android:layout_margin="4dp"
                 />
 
         </LinearLayout>
 
-        <!-- 3rd Row        -->
-
+    <!-- 3rd row       -->
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -175,51 +169,55 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:layout_gravity="center"
                 android:text="4"
-                android:background="#FFFFFF"
+                android:textColor="#ffffff"
+                android:background="@drawable/btn_ios"
                 android:textStyle="bold"
                 android:textSize="24sp"
-                android:textColor="#000"
-                android:layout_margin="4dp"
+
                 />
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn5"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:layout_gravity="center"
                 android:text="5"
-                android:background="#FFFFFF"
+                android:textColor="#ffffff"
+                android:background="@drawable/btn_ios"
                 android:textStyle="bold"
                 android:textSize="24sp"
-                android:textColor="#000"
-                android:layout_margin="4dp"
                 />
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn6"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:layout_gravity="center"
                 android:text="6"
-                android:background="#FFFFFF"
+                android:textColor="#ffffff"
+                android:background="@drawable/btn_ios"
                 android:textStyle="bold"
                 android:textSize="24sp"
-                android:textColor="#000"
-                android:layout_margin="4dp"
                 />
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btnAdd"
+                android:id="@+id/btnSubtract"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="+"
-                android:background="#EB9516"
+                android:layout_gravity="center"
+                android:text="-"
+                android:textColor="#ffffff"
+                android:background="@drawable/btnios_y"
                 android:textStyle="bold"
                 android:textSize="24sp"
-                android:textColor="#FFF"
-                android:layout_margin="4dp"
                 />
 
+
         </LinearLayout>
+
+    <!-- 4th row       -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -232,90 +230,117 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:layout_gravity="center"
                 android:text="1"
-                android:background="#FFFFFF"
+                android:textColor="#ffffff"
+                android:background="@drawable/btn_ios"
                 android:textStyle="bold"
                 android:textSize="24sp"
-                android:textColor="#000"
-                android:layout_margin="4dp"
+
                 />
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn2"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:layout_gravity="center"
                 android:text="2"
-                android:background="#FFFFFF"
+                android:textColor="#ffffff"
+                android:background="@drawable/btn_ios"
                 android:textStyle="bold"
                 android:textSize="24sp"
-                android:textColor="#000"
-                android:layout_margin="4dp"
                 />
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn3"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:layout_gravity="center"
                 android:text="3"
-                android:background="#FFFFFF"
+                android:textColor="#ffffff"
+                android:background="@drawable/btn_ios"
                 android:textStyle="bold"
                 android:textSize="24sp"
-                android:textColor="#000"
-                android:layout_margin="4dp"
                 />
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btnEquals"
+                android:id="@+id/btnPlus"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="="
-                android:background="#ED4B1C"
+                android:layout_gravity="center"
+                android:text="+"
+                android:textColor="#ffffff"
+                android:background="@drawable/btnios_y"
                 android:textStyle="bold"
                 android:textSize="24sp"
-                android:textColor="#FFF"
-                android:layout_margin="4dp"
                 />
+
+
 
         </LinearLayout>
 
-        <!-- 4th Row        -->
+    <!-- 5th row        -->
+
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
             android:orientation="horizontal"
+            android:weightSum="4"
             >
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btn0"
+                android:id="@+id/btnCalculator"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="2"
-                android:text="0"
-                android:background="#FFFFFF"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:text="🖩"
+                android:textColor="#ffffff"
+                android:background="@drawable/btn_ios"
                 android:textStyle="bold"
                 android:textSize="24sp"
-                android:textColor="#000"
-                android:layout_margin="4dp"
-                />
 
+                />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnZero"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:text="0"
+                android:textColor="#ffffff"
+                android:background="@drawable/btn_ios"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                />
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnDecimal"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:layout_gravity="center"
                 android:text="."
-                android:background="#FFFFFF"
+                android:textColor="#ffffff"
+                android:background="@drawable/btn_ios"
                 android:textStyle="bold"
                 android:textSize="24sp"
-                android:textColor="#000"
-                android:layout_margin="4dp"
+                />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnEqual"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:text="="
+                android:textColor="#ffffff"
+                android:background="@drawable/btnios_y"
+                android:textStyle="bold"
+                android:textSize="24sp"
                 />
 
         </LinearLayout>
 
-
-
     </LinearLayout>
-
 
 </RelativeLayout>
